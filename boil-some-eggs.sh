@@ -6,7 +6,7 @@ REPO_URL="https://github.com/$YOUR_USERNAME/boilerplate.git"
 # Add or remove your subfolders here
 OPTIONS=("vue" "OpenGL" "react" "nodejs")
 
-echo "🛠️  Boilerplate Selector"
+echo "# Boilerplate Selector"
 echo "-----------------------"
 
 # --- 2. Selection Menu ---
@@ -24,7 +24,7 @@ done
 read -p "Enter the name for your new project: " PROJECT_NAME
 
 # --- 4. Sparse Clone Logic (The "Lightweight" Part) ---
-echo "📥 Cloning only /$SUBFOLDER..."
+echo "Cloning /$SUBFOLDER..."
 
 # Create directory and initialize git
 mkdir "$PROJECT_NAME"
@@ -49,11 +49,11 @@ rmdir "$SUBFOLDER"
 
 # --- 6. Run Initialization ---
 if [ -f "./init.sh" ]; then
-    echo "⚙️  Running init.sh..."
+    echo "Running init.sh..."
     chmod +x init.sh
     ./init.sh
 else
-    echo "⚠️  No init.sh found. Running npm install as fallback..."
+    echo "No init.sh found. Running npm install as fallback..."
     [ -f "package.json" ] && npm install
 fi
 
@@ -80,8 +80,8 @@ if [[ "$CREATE_REPO" =~ ^[Yy]$ ]]; then
         git add .
         git commit -m "Initial commit from $SUBFOLDER boilerplate"
         gh repo create "$REPO_NAME" --"$VISIBILITY" --source=. --remote=origin --push
-        echo "🚀 Project live at: https://github.com/$YOUR_USERNAME/$REPO_NAME"
+        echo "Project live at: https://github.com/$YOUR_USERNAME/$REPO_NAME"
     fi
 fi
 
-echo "🎉 Done! Your project is ready in ./$PROJECT_NAME"
+echo "Done! Your project is ready in ./$PROJECT_NAME"
