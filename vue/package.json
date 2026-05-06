@@ -1,0 +1,31 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "preview": "vite preview",
+    "build": "vite build",
+    "type-check": "vue-tsc --build"
+  },
+  "keywords": [],
+  "author": "Tommaso Piana Agostinetti",
+  "license": "ISC",
+  "description": "Basic Vue + Vite setup",
+  "dependencies": {
+    "@unocss/reset": "^66.6.8",
+    "vue": "^3.5.34"
+  },
+  "devDependencies": {
+    "@tsconfig/node24": "^24.0.4",
+    "@types/node": "^25.6.0",
+    "@vitejs/plugin-vue": "^6.0.6",
+    "@vue/tsconfig": "^0.9.1",
+    "typescript": "^6.0.3",
+    "unocss": "^66.6.8",
+    "vite": "^8.0.10",
+    "vue-tsc": "^3.2.8"
+  }
+}
